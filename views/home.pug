@@ -1,0 +1,14 @@
+extends layouts/main.pug
+
+block content
+    h1 Hello
+    form(action="/" method="post")
+        input(type="text" id="txt-js" name="txt")
+        input(type="submit" value="CHECK" id="btn-js")
+
+    .area
+    ul
+        each data in doData
+            form(action="/" method="post")
+                li=data.task
+                    input(type="submit" value="X")
